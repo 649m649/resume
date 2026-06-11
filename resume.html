@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历 - 门慧鑫</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        /* 头部区域 */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* 主要内容区域 */
+        .main-content {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        /* 时间线样式 */
+        .timeline-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 3px solid #667eea;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .timeline-date {
+            color: #667eea;
+            font-weight: 500;
+        }
+
+        .timeline-subtitle {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content {
+            color: #555;
+        }
+
+        /* 技能标签 */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        /* 项目卡片 */
+        .project-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .project-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .project-desc {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background: #e9ecef;
+            color: #495057;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            header {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .main-content {
+                padding: 25px 20px;
+            }
+
+            .timeline-header {
+                flex-direction: column;
+            }
+        }
+
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部区域 -->
+        <header>
+            <img src="https://s3.bmp.ovh/2026/06/11/hqYh0lPd.jpg" alt="头像" class="avatar">
+            <h1>门慧鑫</h1>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>⭕️ 性别：</span>
+                    <span>女</span>
+                </div>
+                <div class="contact-item">
+                    <span>⭕️ 年龄：</span>
+                    <span>21岁</span>
+                </div>
+                <div class="contact-item">
+                    <span>📍 现居地：</span>
+                    <span>云南省昆明市</span>
+                </div>
+                <div class="contact-item">
+                    <span>📱 联系电话：</span>
+                    <span>13134974439</span>
+                </div>
+                <div class="contact-item">
+                    <span>📧 电子邮箱：</span>
+                    <span>2891299228@qq.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>💻 求职意向：</span>
+                    <span>数据分析师、大数据开发工程师、数据挖掘练习生</span>
+                </div>
+            </div>
+        </header>
+
+         <!-- 主要内容 -->
+        <div class="main-content">
+
+            <!-- 教育背景 -->
+            <section>
+                <h2> 教育背景</h2>
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="timeline-title">昆明学院</span>
+                        <span class="timeline-date">2023.09 - 2027.6</span>
+                    </div>
+                    <div class="timeline-subtitle">数据科学与大数据技术 | 本科</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>主修课程：Python程序设计、数据库原理、机器学习、数据可视化、Hadoop框架等</li>
+                            <li>在校期间所获证书：“挑战杯”大学生创业计划竞赛省奖、普通话二甲、英语四级证书</li>
+                           
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="timeline-title">昆明学院校团委学术科创部</span>
+                        <span class="timeline-date">2023.09 - 2026.06</span>
+                    </div>
+                    <div class="timeline-subtitle">策划中心干事 - 策划中心干部 - 学术科创部部长</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>从策划中心干事逐步成长为部门负责人，完整参与部门从执行到统筹的全流程工作</li>
+                            <li>担任策划中心干部期间，负责部门活动的策划、组织与落地，协调部门中其他子部门完成各项工作</li>
+                            <li>担任部长期间，统筹分配下面干部的工作，与各二级学院进行工作对接</li>
+                            <li>组织、协调“挑战杯”院赛、校赛及申报省赛工作的进行，各项相关材料的收集与整理</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 专业技能 -->
+            <section>
+                <h2>专业技能</h2>
+                
+                <div class="project-card">
+                    <div class="project-title">编程语言</div>
+                    <div class="project-desc">
+                        熟练使用 Python，精通Pandas、NumPy、Matplotlib、Seaborn、Scikit-learn、PyTorch等数据分析与机器学习库；熟练掌握 SQL，可独立完成复杂多表查询、数据清洗、索引优化、分组统计分析；了解Scala基础语法，适配大数据框架开发。
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">SQL</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">大数据框架</div>
+                    <div class="project-desc">
+                        掌握Hadoop生态圈核心组件，熟悉HDFS分布式存储、MapReduce计算模型、Hive数据仓库；熟练使用Spark RDD、DataFrame进行离线大数据处理，了解分布式系统基础原理与部署逻辑。
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Hadoop</span>
+                        <span class="tech-tag">Hive数据仓库</span>
+                        <span class="tech-tag">Spark</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">工具与可视化</div>
+                    <div class="project-desc">
+                        精通Excel数据透视表、函数统计、数据建模；掌握Jupyter Notebook开发调试，熟悉Linux基础命令与服务器简单操作。
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Excel</span>
+                        <span class="tech-tag">Jupyter Notebook</span>
+                        <span class="tech-tag">Linux</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">其他能力</div>
+                    <div class="project-desc">
+                        掌握数据挖掘、特征工程、分类回归、聚类分析等机器学习基础算法；熟悉数据采集、清洗、处理、建模、可视化全流程。
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">数据挖掘</span>
+                        <span class="tech-tag">分类回归</span>
+                        <span class="tech-tag">聚类分析</span>
+                    </div>
+                </div>
+            </section>
+
+             <!-- 实践经历 -->
+            <section>
+                <h2>实践经历</h2>
+      
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="timeline-title">校内实训</span>
+                        <span class="timeline-date">2025.12.06 - 2025.12.28</span>
+                    </div>
+                    
+                    <div class="timeline-content">
+                        <ul>
+                            <li>参与学校大数据专业综合实训，系统学习数据采集、ETL处理、大数据建模、可视化展示完整流程，团队协作完成实训课题，熟练掌握行业主流技术工具的实操应用，夯实专业落地能力。</li>  
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="timeline-title">竞赛实训</span>
+                        <span class="timeline-date">2025.12 - 2026.06</span>
+                    </div>
+                    
+                    <div class="timeline-content">
+                        <ul>
+                            <li>参与“挑战杯”、程序设计大赛、数学建模竞赛等科创项目，负责数据处理、模型搭建、数据分析工作，提升团队协作、问题解决与项目落地能力。</li>  
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
+<!-- 自我评价 -->
+            <section>
+                <h2>自我评价</h2>
+                <div class="skills-container">
+                    <span class="skill-tag">enfp</span>
+                    <span class="skill-tag">活泼</span>
+                    <span class="skill-tag">社交能力强</span>
+                    <span class="skill-tag">专业知识基础扎实</span>
+                    <span class="skill-tag">执行能力强</span>
+                    <span class="skill-tag">思维逻辑良好</span>
+                    <span class="skill-tag">熟练运用多种计算机语言</span>
+                    <span class="skill-tag">适应能力好</span>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
